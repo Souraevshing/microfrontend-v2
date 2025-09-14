@@ -11,7 +11,7 @@ const mount = (element) => {
 }
 
 if(process.env.NODE_ENV === "development") {
-    const root = document.querySelector('#marketing-dev-root');
+    const root = document.getElementById('marketing-dev-root');
     if(root) {
         mount(root)
     }
