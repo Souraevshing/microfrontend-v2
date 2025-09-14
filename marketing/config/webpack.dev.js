@@ -16,13 +16,13 @@ const devConfig={
         new HtmlWebpackPlugin({
             template: './public/index.html',
         }),
-
         new ModuleFederationPlugin({
             name: 'marketing',
             filename: 'remoteEntry.js',
             exposes: {
                 './MarketingApp': './src/bootstrap'
-            }
+            },
+            shared: ['react', 'react-dom'],
         })
     ]
 }
