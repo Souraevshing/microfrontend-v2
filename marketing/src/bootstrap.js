@@ -5,7 +5,7 @@ import {createMemoryHistory, createBrowserHistory} from "history"
 import App from "./App"
 
 const mount = (element, {onNavigate, defaultHistory}={}) => {
-    const history = createMemoryHistory() || defaultHistory;
+    const history = defaultHistory || createMemoryHistory();
 
     if (onNavigate) {
         history.listen(onNavigate);
