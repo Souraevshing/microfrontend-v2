@@ -4,7 +4,6 @@ import {createGenerateClassName, StylesProvider} from "@material-ui/core";
 
 import LandingPage from "./components/Landing";
 import PricingPage from "./components/Pricing"
-import ErrorPage from "./components/ErrorPage";
 
 const generateClassName = createGenerateClassName({
     productionPrefix: '_cls_marketing',
@@ -16,10 +15,8 @@ export default function App({history}) {
             <StylesProvider generateClassName={generateClassName}>
                 <Router history={history}>
                     <Switch>
-                        <Route exact path="/" component={LandingPage} />
-                        <Route path="/auth/signup" component={LandingPage} />
+                        <Route exact path={'/'} component={LandingPage} />
                         <Route exact path={'/pricing'} component={PricingPage} />
-                        <Route path={'*'} component={ErrorPage} />
                     </Switch>
                 </Router>
             </StylesProvider>

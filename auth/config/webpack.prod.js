@@ -4,13 +4,11 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
-const BASE_URL = process.env.PRODUCT_DOMAIN;
-
 const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/auth/latest',
+        publicPath: '/auth/latest/',
     },
     plugins: [
         new ModuleFederationPlugin({

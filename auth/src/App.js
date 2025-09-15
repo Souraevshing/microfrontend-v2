@@ -9,7 +9,7 @@ const generateClassName = createGenerateClassName({
     productionPrefix: '_cls_auth',
 });
 
-export default function App({history}) {
+export default ({history}) => {
     return(
         <div>
             <StylesProvider generateClassName={generateClassName}>
